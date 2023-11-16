@@ -1,7 +1,10 @@
 import { calculateInvestmentResults, formatter } from "../util/investment"
 
+// mandamos la desustructuracion 
 export const Results = ( { input } ) => {
 
+    // mandamos una variable para guardar los datos 
+    // que sea igual al archivo de los resultados que reciba el input
     const resultsData = calculateInvestmentResults(input)
 
     //                         el resultado de la pocision 0 que es el valor a fin de año 
@@ -32,7 +35,13 @@ export const Results = ( { input } ) => {
             </thead>
 
             <tbody>
-
+                
+                { /* Mandamos la variable de los resultaos mapeado
+                    NOTA: Para no tener el warning que el key sea igual al primer argumento
+                    ponemos el index para no tenerlo como key 
+                
+                */ }
+                
                 {resultsData.map((yearData, index) => {
 
                     //                       El valor del fin de año menos el anual valor por año menos la variable de arriba
@@ -45,6 +54,7 @@ export const Results = ( { input } ) => {
 
                         <td>{yearData.year}</td>
 
+                        { /* Aqui mandamos llamar el formato creado del archivo js */ }
                         <td>{formatter.format(yearData.valueEndOfYear)}</td>
 
                         <td>{formatter.format(yearData.interest)}</td>

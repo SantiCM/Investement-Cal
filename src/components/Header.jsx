@@ -1,6 +1,6 @@
 import logo from "../assets/investment-calculator-logo.png"
 
-
+// Mandamos un componte header normal 
 export const Header = () => {
   
     return (
