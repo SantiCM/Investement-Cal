@@ -7,15 +7,16 @@ function App() {
 
   const [ userInput, setUserInput ] = useState({
          
-    initialInvestement: 100000,
+    initialInvestment: 100000,
     
-    annualInvestement: 1200,
+    annualInvestment: 1200,
     
-    expectedReturn: 6,
+    expectedReturn: 1500,
     
-    duration: 1
+    duration: 1,
 
   })
+
 
   const inputsValid  = userInput.duration >= 1
 
@@ -45,7 +46,8 @@ function App() {
 
       <UserInput onChange={HandleChange} userInput={userInput}></UserInput>  
 
-      {!inputsValid && <p className="center">Please enter a duration greater than zero</p>}
+      {!inputsValid && <p className="center">Please put values ​​above zero</p>}
+
 
       {inputsValid && <Results input={userInput}></Results>}
     

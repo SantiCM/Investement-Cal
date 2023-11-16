@@ -33,7 +33,7 @@ export const Results = ( { input } ) => {
 
             <tbody>
 
-                {resultsData.map(yearData => {
+                {resultsData.map((yearData, index) => {
 
                     //                       El valor del fin de año menos el anual valor por año menos la variable de arriba
                     const totalInterestValue = yearData.valueEndOfYear - yearData.annualInvestment * yearData.year - initialInvestement
@@ -41,7 +41,7 @@ export const Results = ( { input } ) => {
                     //                          El valor de find de año meno el total de intereses
                     const totalAmountInvested = yearData.valueEndOfYear - totalInterestValue
                     
-                    return <tr key={yearData}>
+                    return <tr key={index}>
 
                         <td>{yearData.year}</td>
 

@@ -18,9 +18,9 @@ export const UserInput = ({onChange, userInput}) => {
                         
                         required 
                         
-                        value={userInput.initialInvestement} 
+                        value={userInput.initialInvestment} 
                         
-                        onChange={(event) => onChange("initialInvestement",event.target.value)}
+                        onChange={(event) => onChange("initialInvestment",event.target.value)}
                     >
 
                     </input>
@@ -37,9 +37,9 @@ export const UserInput = ({onChange, userInput}) => {
                         
                         required 
                         
-                        value={userInput.annualInvestement} 
+                        value={userInput.annualInvestment} 
                         
-                        onChange={(event) => onChange("",event.target.value)}
+                        onChange={(event) => onChange("annualInvestment",event.target.value)}
                     >
 
                     </input>
