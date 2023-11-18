@@ -21,7 +21,7 @@ function App() {
   })
   
   // mandamos un tipo de validacion que la duracion no sea menor a 1
-  const inputsValid  = userInput.duration >= 1
+  const inputsValid  = userInput.duration === 0
 
   // NOTA: Variable super util para regenerar los objetos y arrays
 
@@ -66,7 +66,7 @@ function App() {
 
       { /* Si no pasa esa validacion mostramos este texto */ }
 
-      {!inputsValid && <p className="center">Please put values ​​above zero</p>}
+      {/*!inputsValid && <p className="center">Please put values ​​above zero</p>*/}
 
       { /* Si pasa le damos el componente de Results con sus props que es el input que recibe el primer estado */ }
 

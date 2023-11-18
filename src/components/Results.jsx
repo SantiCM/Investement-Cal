@@ -3,9 +3,19 @@ import { calculateInvestmentResults, formatter } from "../util/investment"
 // mandamos la desustructuracion 
 export const Results = ( { input } ) => {
 
-    // mandamos una variable para guardar los datos 
-    // que sea igual al archivo de los resultados que reciba el input
-    const resultsData = calculateInvestmentResults(input)
+    // madamos un array vacio    
+    const results = []
+
+    // llamamos la variable de la logica y le mandamos el input y el array vacio
+    calculateInvestmentResults(input, results)
+
+    // Si los resultado es de 0 mandamos este mensaje al usuario
+
+    if(results.length === 0) {
+  
+        return <p className='center'>Invalid input data provided</p>
+        
+    }
 
     //                         el resultado de la pocision 0 que es el valor a fin de año 
     //                         menos el resultado de la posicion 0 del interes
@@ -42,7 +52,7 @@ export const Results = ( { input } ) => {
                 
                 */ }
                 
-                {resultsData.map((yearData, index) => {
+                {results.map((yearData, index) => {
 
                     //                       El valor del fin de año menos el anual valor por año menos la variable de arriba
                     const totalInterestValue = yearData.valueEndOfYear - yearData.annualInvestment * yearData.year - initialInvestement
