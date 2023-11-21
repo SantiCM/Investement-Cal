@@ -66,12 +66,10 @@ function App() {
 
       { /* Si no pasa esa validacion mostramos este texto */ }
 
-      {/*!inputsValid && <p className="center">Please put values ​​above zero</p>*/}
-
       { /* Si pasa le damos el componente de Results con sus props que es el input que recibe el primer estado */ }
 
-      {inputsValid && <Results input={userInput}></Results>}
-    
+      <Results input={userInput}></Results>
+
     </>
     
   )

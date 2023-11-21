@@ -20,7 +20,7 @@ export const Results = ( { input } ) => {
     //                         el resultado de la pocision 0 que es el valor a fin de año 
     //                         menos el resultado de la posicion 0 del interes
     //                         menos el resultado de la posicion 0 del annual
-    const initialInvestement = resultsData[0].valueEndOfYear - resultsData[0].interest - resultsData[0].annualInvestment
+    const initialInvestement = results[0].valueEndOfYear - results[0].interest - results[0].annualInvestment
   
     return (
         
